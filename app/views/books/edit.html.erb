@@ -1,19 +1,16 @@
-<div>
-  <p>title : <%= @book.title %></p>
-  <p>body : <%= @book.body %></p>
-  
-  
-  
-  
-</div>
+
+<h1>Editing Book</h1>
 
 <%= form_with model: @book,  local:true do |f| %>
  <h4>title</h4>
  <%= f.text_field :title %>
  <h4>body</h4>
  <%= f.text_area :body %>
- <%= f.submit '投稿' %>
+ <%= f.submit 'Update Book' %>
  <% end %>
  
  <%= link_to 'Show', book_path(@book.id) %> |
  <%= link_to "Back", "/books" %>
+ 
+ 
+ <p>CopyRight Infratop.inc</p>

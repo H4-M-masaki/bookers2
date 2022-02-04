@@ -1,6 +1,6 @@
 <h2>プロフィール編集</h2>
 
-<%= image_tag @book.get_image %>
+<%= image_tag @user.get_profile_image(60) %>
 <%= link_to "⚙",@user %>
 
 
@@ -8,7 +8,7 @@
 
 <% @books.each do |book| %>
     <div>
-     <%= image_tag book.get_image %>
+     <%= image_tag book.user.get_profile_image %>
       <p>title : <%= link_to book.title, book_path(book.id) %></p>
       <p>body : <%= book.body %></p>
     </div>
